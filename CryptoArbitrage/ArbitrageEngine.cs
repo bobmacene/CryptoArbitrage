@@ -32,7 +32,7 @@
             return newBal.Number + (toTrd.Number * price);
         }
 
-        public Coin UpdateBalances(Coin  )
+        public Coin UpdateBalances(Coin first, Coin second  )
         {
 
         }
