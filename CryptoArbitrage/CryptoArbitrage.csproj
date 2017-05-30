@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +51,8 @@
     <Compile Include="Coin.cs" />
     <Compile Include="ExchangeBalances.cs" />
     <Compile Include="ExchangeCurrencyPairPrice.cs" />
+    <Compile Include="Log\Logger.cs" />
+    <Compile Include="Models\OrderBook.cs" />
     <Compile Include="Prices\CexBtcEthPx.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,13 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exchanges\Kracken\" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Exchanges\" />
-    <Folder Include="Exchanges\Kracken\" />
-    <Folder Include="ApiCommands\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

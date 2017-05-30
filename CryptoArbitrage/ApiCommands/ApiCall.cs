@@ -1,4 +1,7 @@
-﻿using System.Net;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Net;
 
 namespace CryptoArbitrage
 {
@@ -14,5 +17,10 @@ namespace CryptoArbitrage
 			return new WebClient().DownloadString(url);
 		}
 
-	}
+        public List<Dictionary<string, Tuple<string, string, string>>> KrackenOrderBook(string url)
+        {
+            var calldata =  new WebClient().DownloadString(url);
+            return JsonConvert.DeserializeObject<List<Dictionary<string, Tuple<string, string, string>>>>(calldata);
+        }
+    }
 }
