@@ -15,7 +15,7 @@ namespace CryptoArbitrage
             var price = new Random();
         }
 
-        private Execute 
+       // private Execute 
         private double GetRandomDouble(double min, double max)
         {
             var random = new Random();

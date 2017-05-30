@@ -52,11 +52,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegexMatch.cs" />
     <Compile Include="TestStrategy.cs" />
+    <Compile Include="ApiCommands\ApiCall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Exchanges\" />
+    <Folder Include="Exchanges\Kracken\" />
+    <Folder Include="ApiCommands\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

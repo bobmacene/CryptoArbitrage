@@ -16,6 +16,14 @@ namespace CryptoArbitrage
             //var cexBtcEth = new RegexMatch(pattern, jsonCex); 
 
 
+            var tickerUrl = "https://api.kraken.com/0/public/ETH/BTC";
+            var tickerUrltradbaleAssetPairsUrl = "https://api.kraken.com/0/public/AssetPairs";
+
+
+            var api = new ApiCall();
+            var tickerInfo = api.CallApi(tickerUrl);
+
+
             var krcknBal = new Coin(Currency.BTC, 1);
             var cexBal = new Coin(Currency.BTC, 1);
 
@@ -27,7 +35,7 @@ namespace CryptoArbitrage
 
             if(execute == Execute.Trade)
             {
-                var trdResult = arbEngine.ExecuteTrade(krcknBal, krcknPx);
+               // var trdResult = arbEngine.ExecuteTrade(krcknBal, krcknPx);
             }
 
            
